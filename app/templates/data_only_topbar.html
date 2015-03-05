@@ -1,0 +1,10 @@
+uptime={{datalayer.uptime}}
+stackmaxtemp={{(datalayer.stackmaxtemp-27315)/100}}
+stackmintemp={{(datalayer.stackmintemp-27315)/100}}
+stackmincell={{'%1.4f' | format( (datalayer.stackmincell/10000)|round(4) )}}
+stackmaxcell={{'%1.4f' | format( (datalayer.stackmaxcell/10000)|round(4) )}}
+stackvolt={{ '%1.2f' | format(datalayer.stackvolt/100)}}
+stacksoc={{'%1.2f' | format(datalayer.stacksoc/100)}}%
+stackI={{'%3.2f' | format(datalayer.stackI/10000)}}
+stackpower={{ '%1.2f' | format(datalayer.stackpower/1000)}}
+cpuPECpercent={{ (datalayer.cpuPECpercent/100)|round|int}}

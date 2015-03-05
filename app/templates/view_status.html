@@ -1,0 +1,54 @@
+<div id="statustablewrap">
+    <table id="statustable">
+        <tr>
+            <td>CPU board temp:</td>
+            <td><span id="cputemp"></span>C</td>
+        </tr>
+        <tr>
+            <td>CPU V3.3:</td>
+            <td><span id="cpuV33">?</span>V</td>
+        </tr>    
+        <tr>
+          <td>Last message</td>
+          <td id="message">{{datalayer.message}}</td>
+        </tr>
+        <tr>
+          <td>USB status</td>
+          <td id="status">{{datalayer.status}}</td>
+        </tr>
+        <tr>
+          <td>Receive counter</td>
+          <td id="reccount">{{datalayer.receivecounter}}</td>
+        </tr>
+        <tr>
+          <td>PEC counter</td>
+          <td id="cpuPEC">{{datalayer.cpePEC}}</td>
+        </tr>
+        <tr>
+          <td>CPU time:</td>
+          <td><span id="cputime"></span></td>
+        </tr>
+        <tr>
+          <td>SQL logging:</td>
+          <td><span id="sqllog"></span></td>
+        </tr>
+        <tr>
+          <td>EEPROM last data:</td>
+          <td><span id="eepromNewest"></span></td>
+        </tr>
+    </table>
+
+    <div class="eeprom">
+      <form>
+          <ul>
+              <li>eeprom (read address 16bit):</li>
+              <li><input size="88" type="text" id="eepromIN" value=""><input onclick="lionEeprom()" type="button" value="send"></input></li>
+              <li><input readonly="true" size="88" type="text" id="eepromOUT" value=""><input onclick="hex2a()" type="button" value="ascii"><input onclick="struct()" type="button" value="struct"></input></li>
+          </ul>
+      </form>
+    </div>
+    
+    <button onClick="lionSend(':b1')">balancing RUN TEST</button>
+      <button onClick="lionSend(':b0')">balancing STOP</button>
+
+</div><!-- status div -->

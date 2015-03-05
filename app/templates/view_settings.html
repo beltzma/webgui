@@ -1,0 +1,17 @@
+
+
+
+
+{% for module in datalayer.Modules %}
+<div class="module_set" id="m{{loop.index0}}">
+  {% set outer_index = loop.index0 %}
+
+    {% for cell in module.Cells %}
+      <div class="cellV_set" id="vm{{outer_index}}c{{loop.index0}}"></div>
+      <div class="cellT_set" id="tm{{outer_index}}c{{loop.index0}}"></div>
+{% endfor %}
+      
+  <div class="module_index_set">Module #{{loop.index0 + 1}}</div>    
+</div>
+{% endfor %}
+

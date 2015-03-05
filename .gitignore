@@ -5,9 +5,12 @@ __pycache__/
 # C extensions
 *.so
 
+# Editor
+*.swp
+
 # Distribution / packaging
 .Python
-env/
+LS_env/
 build/
 develop-eggs/
 dist/

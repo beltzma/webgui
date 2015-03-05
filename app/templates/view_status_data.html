@@ -1,0 +1,11 @@
+{% include "data_only_topbar.html" %}
+message={{datalayer.message}}
+reccount={{datalayer.receivecounter}}
+eepromOUT={{datalayer.eepromOUT}}
+eepromNewest={{datalayer.eepromNewest}}
+cpuV33={{(datalayer.cpuV33/1000)|round(3)}}
+cpuPEC={{datalayer.cpuPEC}}
+cputime={{datalayer.cputime}}
+sqllog={{datalayer.sqllog}}
+cputemp={{(datalayer.cputemp-27315)/100}}
+status={{datalayer.status}}

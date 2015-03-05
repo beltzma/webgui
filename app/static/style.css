@@ -1,0 +1,199 @@
+
+body {
+  background: #ccc;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 0.9em;
+  margin: 0;
+  padding: 0;
+}
+
+.stack-top-strip {
+  background: white;
+  width: 100%;
+  font-size: 1.25em;
+  height: 70px;
+}
+.menu-top-strip {
+  background: #ccc;
+  width: 100%;
+  font-size: 1.25em;
+  height: 40px;
+}
+.menu-top-strip a {
+  text-decoration: none;
+  color: #555;
+  display: block;
+  padding: 7px 15px 7px 15px;
+}
+.menu-top-strip a:hover {
+  background-color: #fc0;
+}
+
+#topbar {
+  padding: 8px 8px 8px 30px;
+}
+
+#topbarcontainer {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: #eee;
+  border-bottom: 2px yellow solid;
+}
+#container {
+  margin-top: 175px;
+}
+
+#statustablewrap {
+  border: 5px #fff solid;
+  background-color: #aaa;
+  padding: 5px;
+  width: 850px;
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+#statustable td {
+  padding: 1px;
+  margin: 0;
+  border : 0px #eee solid;
+  font-size: 0.9em;
+}
+
+div#refreshblink {
+  width: 10px;
+  height: 10px;
+  background: red;
+}
+div#refreshblinkwrapper {
+  width: 10px;
+  height: 10px;
+  margin-bottom: -10px;
+  position: relative;
+  top: -16px;
+  left: -20px;
+}
+
+h1 {
+  background: #ddd;
+  padding: 15px;
+}
+
+.lipcbtemp {
+  /*background: url('chip15.png') no-repeat left 50%;
+  padding: 0px 0px 0px 15px;*/
+}
+
+div.module {
+  border: 2px #aaa solid;
+  width: 720px;
+  height: 300px;
+  margin: 1em 0em 2em 0em;
+  background: #fff;
+  position: relative;
+  float: left;
+}
+
+div.module div.cell:hover {
+  background: #5b5;
+}
+
+div.module div.cell {
+  width: 55px;
+  background: green;
+  float: left;
+  border-top: 4px red solid;
+  position: absolute;
+  bottom: 0;
+}
+div.module div.temperature {
+  width: 45px;
+  background: orange; /* W3C */
+  font-size: 0.9em;
+  position: absolute;
+  bottom: 0;
+  border-top: 4px #ccc solid;
+  color: black;
+}
+
+.barbold {
+  font-weight: bold;
+}
+
+.module-top-strip {
+  background: white;
+  width: 99%;
+  padding: 0 3px 0 3px;
+}
+
+#eepromOUT {
+  background: #aaa;
+}
+
+.menu-top-strip ul,
+.stack-top-strip ul,
+.module-top-strip ul,
+.eeprom ul {
+  list-style-type: none;
+  display: inline;
+}
+
+
+.menu-top-strip ul li,
+.stack-top-strip ul li,
+.module-top-strip ul li {
+  float: left;
+  margin-right: 1em;
+}
+
+.stack-top-strip ul li {
+  font-size: 1.15em;
+  margin: 4px 10px 4px 10px;
+}
+
+.balancing {
+  display: none;
+  background: linear-gradient(135deg, #fceabb 0%,#fccd4d 50%,#f8b500 51%,#fbdf93 100%); /* W3C */
+  border: 1px black solid;
+  width: 20px;
+  height: 20px;
+  left: 15px;
+  position: relative;
+  border-radius: 11px;
+}
+
+div.module div.cell div.voltage {
+  color: #111;
+  position: relative;
+  bottom: 28px;
+  left: 0px;
+}
+.cell .unit {
+  display: none;
+}
+
+div.module div.module_title {
+  position: absolute;
+  bottom: -25px;
+  right: 5px;
+  font-weight: bold;
+}
+
+#alarm_stackmaxcell {
+  display: none;
+}
+
+.module_set {
+  
+}
+.cellV_set {
+
+}
+.cellT_set {
+
+}
+
+.module_index_set {
+
+}
