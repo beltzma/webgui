@@ -8,6 +8,9 @@ __pycache__/
 # Editor
 *.swp
 
+# SQlite
+*.db
+
 # Distribution / packaging
 .Python
 LS_env/
