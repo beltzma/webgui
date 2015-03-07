@@ -4,6 +4,12 @@ from ..lionlib import *
 from ..bmslion import BmsLion
 import time
 
+from matplotlib import pyplot as plt
+from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+from matplotlib.figure import Figure
+from matplotlib.dates import AutoDateFormatter, AutoDateLocator, date2num
+
+
 
 @main.route('/', methods=['GET','POST'])
 def index():
@@ -56,4 +62,27 @@ def GET_view(page):
     
     return render_template(page+'.html', datalayer = BmsLion.self.datalayer)
 
+@main.route('/fig/<param1>/<param2>')
+def GET_plot(param1="1", param2="2"):
+    
+    plt.plot(date2num(time),values)
+    plt.title("Quant SOC reset")
+    plt.xlabel("time")
+    plt.ylabel("voltage")
+    # the the x limits to the 'hours' limit
+    #plt.xlim(0, 23)
+    # set the X ticks every 2 hours
+    #plt.xticks(range(0, 23, 2))
+    xtick_locator = AutoDateLocator(minticks=5, maxticks=5)
+    xtick_formatter = AutoDateFormatter(xtick_locator)
+    ax = plt.axes()
+    ax.xaxis.set_major_locator(xtick_locator)
+    ax.xaxis.set_major_formatter(xtick_formatter)
+    plt.grid()
+    
+    buf = io.BytesIO()
+    plt.savefig(buf, format = 'png')
+    buf.seek(0)
+    #plt.show()
+    return send_file(buf, mimetype='image/png')
 
